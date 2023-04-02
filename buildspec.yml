@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - make setup
+      - make source
+      - make install
+  build:
+    commands:
+      - make source
+      - make lint-check
+      - make test
+
+artifacts:
+  files:
+    - ./templates
+		- ./models
+		- application.py
+		- requirements.txt
+  name: flask-covid-codepipeline-$(date +%Y-%m-%d)
