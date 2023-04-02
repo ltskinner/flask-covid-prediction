@@ -59,4 +59,5 @@ def test_predict_form(client):
         },
     )
     expected_content = "Predicted positive cases"
-    assert expected_content in resp.text
+    content = resp.data.decode("utf-8")
+    assert expected_content in content
