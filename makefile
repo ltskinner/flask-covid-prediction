@@ -12,6 +12,8 @@ install:
 lint-force:
 	isort .
 	black .
+	flake8 .
+	pylint --disable=R,C,pointless-string-statement ./*.py ./tests
 
 lint-check:
 	isort . --check-only
