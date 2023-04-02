@@ -19,16 +19,6 @@ def client(app):
     return app.test_client()
 
 
-"""
-@pytest.fixture(name="client")
-def client_fixture():
-    application.config.update({"TESTING": True})
-
-    with application.test_client() as client:
-        yield client
-"""
-
-
 def test_home(client):
     resp = client.get("/")
 
