@@ -13,7 +13,7 @@ def home():
 
 @application.route("/predict", methods=["POST"])
 def predict():
-    # TODO: input verification
+    # future: input verification
     # json request
     if len(request.form) == 0:
         print("\n\n\n\nJSON REQUEST\n\n\n\n")
