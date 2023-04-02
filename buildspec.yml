@@ -14,8 +14,8 @@ phases:
 
 artifacts:
   files:
-    - ./templates
-    - ./models
+    - ./templates/*
+    - ./models/*
     - application.py
     - requirements.txt
   name: flask-covid-codepipeline-$(date +%Y-%m-%d)
