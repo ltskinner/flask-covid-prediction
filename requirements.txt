@@ -1,0 +1,16 @@
+## Linters
+isort
+black
+flake8
+pylint
+
+## Testers
+coverage
+pytest
+
+
+## Functionals
+pandas
+joblib
+scikit-learn
+Flask
