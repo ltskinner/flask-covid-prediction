@@ -28,3 +28,10 @@ train:
 
 run:
 	python application.py
+
+zip:
+	zip -r flask-meal-0.0.2.zip \
+		./templates \
+		./models \
+		application.py \
+		requirements.txt
