@@ -1,0 +1,18 @@
+
+steps:
+  - name: python:3.9
+    id: Test
+    entrypoint: /bin/sh
+    args:
+    - -c
+    - |
+      make setup
+      make source
+      make install
+      make lint-check
+      make test
+  # aight so this layer is the `gcloud` layer
+  # `gcloud app deploy app.yml`
+  - name: "gcr.io/cloud-builders/gcloud"
+    id: Deploy
+    args: ["app", "deploy"]
