@@ -14,3 +14,6 @@ pandas
 joblib
 scikit-learn
 Flask
+
+### GCP only
+gunicorn
